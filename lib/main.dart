@@ -1,3 +1,4 @@
+import 'package:afrorecipes_app/dish.dart';
 import 'package:afrorecipes_app/ingredients.dart';
 import 'package:flutter/material.dart';
 
@@ -16,7 +17,8 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: const MyHomePage(title: 'Afro Recipes App'),
+      debugShowCheckedModeBanner: false,
+      home: const MyHomePage(title: 'Afro Recipes'),
     );
   }
 }
@@ -40,6 +42,7 @@ class _MyHomePageState extends State<MyHomePage> {
       appBar: AppBar(
 
         title: Text(widget.title),
+        centerTitle: true,
       ),
       body: Center(
 
@@ -47,12 +50,10 @@ class _MyHomePageState extends State<MyHomePage> {
 
           mainAxisAlignment: MainAxisAlignment.center,
           children: const <Widget>[
+            Dish(),
           ],
         ),
       ),
-      floatingActionButton: FloatingActionButton(onPressed: () {
-        Navigator.push(context, MaterialPageRoute(builder: (context) => const Ingredients()));
-      },),
     );
   }
 }
