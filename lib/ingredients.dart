@@ -56,6 +56,121 @@ class Ingredients extends StatelessWidget {
                         const SizedBox(
                           height: 24.0,
                         ),
+                        Row(
+                          children: [
+                            const Text(
+                              'Here is what you need',
+                              style: TextStyle(
+                                fontSize: 25.0,
+                                fontWeight: FontWeight.bold
+                              ),
+                            ),
+                            Padding(
+                              padding: const EdgeInsets.only(left: 10.0),
+                              child: Image.network(
+                                'https://media.istockphoto.com/id/494307985/vector/female-emoticon-winking.jpg?s=612x612&w=0&k=20&c=VdzjbcHJ-zMq9qX3cf5mCAI8YA1UmeostEvg3so3ZnI=',
+                                width: 40,
+                                height: 40,
+                              ),
+                            )
+                          ],
+                        ),
+                        const SizedBox(
+                          height: 20.0,
+                        ),
+                        DataTable(
+                          border: TableBorder.all(
+                            width: 1,
+                            borderRadius: BorderRadius.circular(5.0),
+                          ),
+                          headingRowColor: MaterialStateColor.resolveWith(
+                              (states) => Colors.blue),
+                          columns: const [
+                            DataColumn(
+                                label: Text(
+                              "No",
+                              style: TextStyle(
+                                fontWeight: FontWeight.bold,
+                              ),
+                            )),
+                            DataColumn(
+                                label: Text(
+                              "Item",
+                              style: TextStyle(
+                                fontWeight: FontWeight.bold,
+                              ),
+                            )),
+                            DataColumn(
+                                label: Text(
+                              "Quantity",
+                              style: TextStyle(
+                                fontWeight: FontWeight.bold,
+                              ),
+                            )),
+                          ],
+                          rows: const [
+                            DataRow(cells: [
+                              DataCell(Text(
+                                "1",
+                              )),
+                              DataCell(Text("Mealie-meal")),
+                              DataCell(Text("1.5-2 cups")),
+                            ]),
+                            DataRow(cells: [
+                              DataCell(Text("2")),
+                              DataCell(Text("Boiling water")),
+                              DataCell(Text("3 cups")),
+                            ]),
+                            DataRow(cells: [
+                              DataCell(Text("3")),
+                              DataCell(Text("Cold water")),
+                              DataCell(Text("3/4 cup")),
+                            ]),
+                            DataRow(cells: [
+                              DataCell(Text("4")),
+                              DataCell(Text("Salt")),
+                              DataCell(Text("2 teaspoon")),
+                            ]),
+                            DataRow(cells: [
+                              DataCell(Text("5")),
+                              DataCell(Text("Garlic powder")),
+                              DataCell(Text("1 teaspoon")),
+                            ]),
+                            DataRow(cells: [
+                              DataCell(Text("6")),
+                              DataCell(Text("Black pepper")),
+                              DataCell(Text("1/2 teaspoon")),
+                            ]),
+                            DataRow(cells: [
+                              DataCell(Text("7")),
+                              DataCell(Text("Pound chuck beef")),
+                              DataCell(Text("1 pound")),
+                            ]),
+                            DataRow(cells: [
+                              DataCell(Text("9")),
+                              DataCell(Text("Butter")),
+                              DataCell(Text("1 teaspoons")),
+                            ]),
+                            DataRow(cells: [
+                              DataCell(Text("10")),
+                              DataCell(Text("Vegetable oil")),
+                              DataCell(Text("2 tablespoons")),
+                            ]),
+                            DataRow(cells: [
+                              DataCell(Text("11")),
+                              DataCell(Text("Salt for beef")),
+                              DataCell(Text("1 teaspoon")),
+                            ]),
+                            DataRow(cells: [
+                              DataCell(Text("12")),
+                              DataCell(Text("Black pepper for beef")),
+                              DataCell(Text("1 tablespoon")),
+                            ]),
+                          ],
+                        ),
+                        const SizedBox(
+                          height: 24.0,
+                        ),
                         const Text(
                           "How to prepare",
                           style: TextStyle(
